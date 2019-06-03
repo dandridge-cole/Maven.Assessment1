@@ -32,7 +32,7 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        return camelCase(reverse(str));
     }
 
 
