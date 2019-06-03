@@ -49,6 +49,14 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        StringBuilder answer=new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            answer.append(
+                    Character.isLetter(str.charAt(i))?
+                    str.charAt(i)>'Z'?Character.toUpperCase(str.charAt(i)):Character.toLowerCase(str.charAt(i)):
+                            str.charAt(i)
+            );
+        }
+        return answer.toString();
     }
 }
