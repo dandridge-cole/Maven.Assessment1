@@ -74,7 +74,14 @@ public class ArrayUtils {
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+    public static Object[] mergeArrays(Integer[] objectArray, Integer[] objectArrayToAdd) {
+        Integer[] answer= new Integer[objectArray.length+objectArrayToAdd.length];
+        for (int i = 0; i < objectArray.length; i++) {
+            answer[i]=objectArray[i];
+        }
+        for (int i = 0; i < objectArrayToAdd.length; i++) {
+            answer[i+objectArray.length]=objectArrayToAdd[i];
+        }
+        return answer;
     }
 }
