@@ -9,8 +9,10 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-
-        return str.toUpperCase().charAt(0)+ str.length()>1?str.substring(1):"";
+        StringBuilder answer= new StringBuilder();
+        answer.append(Character.toUpperCase(str.charAt(0)));
+        answer.append(str.length()>1?str.substring(1):"");
+        return answer.toString();
     }
 
     /**
@@ -20,7 +22,7 @@ public class BasicStringUtils {
     public static String reverse(String str) {
         StringBuilder answer= new StringBuilder();
         for (int i = str.length()-1; i >=0 ; i--) {
-            answer.append(i);
+            answer.append(str.charAt(i));
         }
         return answer.toString();
     }
