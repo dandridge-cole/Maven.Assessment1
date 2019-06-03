@@ -121,6 +121,10 @@ public class ArrayUtils {
        // Object newArray[] = ArrayUtils.mergeArrays(objectArray, objectArrayToAdd);
 
         //Object[] newArray = ArrayUtils.addAll(objectArray, objectArrayToAdd);
+
+        Object newArray1[] = new Object[objectArray.length + objectArrayToAdd.length];
+
+
         return null;
     }
 }
