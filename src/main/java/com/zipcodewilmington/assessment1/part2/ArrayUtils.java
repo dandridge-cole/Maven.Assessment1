@@ -39,8 +39,13 @@ public class ArrayUtils {
                 k++;
             }
         }
+        Integer[] newArray2 = new Integer[arr.length];
+        for (int i = 0; i < arr.length; i++){
+            newArray2[i] = (Integer)arr[i];
+        }
 
-        return arr;
+
+        return newArray2;
     }
 
     /**
