@@ -1,5 +1,6 @@
 package com.zipcodewilmington.assessment1.part2;
 
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -98,7 +99,21 @@ public class ArrayUtils {
      * @return an array containing all elements in `objectArray` and `objectArrayToAdd`
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
-    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+    public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {//FAIL..................
+      /*  int length1 = objectArray.length;
+        int length2 = objectArrayToAdd.length;
+        Integer newArray[] = new Integer[(length1+length2)];
+        for (int i = 0; i < (objectArray.length); i++) {
+            newArray[i] = objectArray[i];
+        }
+        for (int i = 0; i < (objectArrayToAdd.length); i++) {
+            newArray[i] = objectArrayToAdd[i];
+        }
+
+*/
+       // Object newArray[] = ArrayUtils.mergeArrays(objectArray, objectArrayToAdd);
+
+        //Object[] newArray = ArrayUtils.addAll(objectArray, objectArrayToAdd);
         return null;
     }
 }
