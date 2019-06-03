@@ -60,7 +60,12 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+        Object leastCommonSoFar = objectArray[0];
+        for (int i = 0; i < objectArray.length; i++) {
+            if(getNumberOfOccurrences(objectArray,leastCommonSoFar)>getNumberOfOccurrences(objectArray,objectArray[i]))
+                leastCommonSoFar=objectArray[i];
+        }
+        return leastCommonSoFar;
     }
 
     /**
