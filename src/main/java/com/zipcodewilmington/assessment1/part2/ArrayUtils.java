@@ -107,24 +107,23 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {//FAIL..................
-      /*  int length1 = objectArray.length;
-        int length2 = objectArrayToAdd.length;
-        Integer newArray[] = new Integer[(length1+length2)];
-        for (int i = 0; i < (objectArray.length); i++) {
-            newArray[i] = objectArray[i];
-        }
-        for (int i = 0; i < (objectArrayToAdd.length); i++) {
-            newArray[i] = objectArrayToAdd[i];
-        }
-
-*/
-       // Object newArray[] = ArrayUtils.mergeArrays(objectArray, objectArrayToAdd);
-
-        //Object[] newArray = ArrayUtils.addAll(objectArray, objectArrayToAdd);
 
         Object newArray1[] = new Object[objectArray.length + objectArrayToAdd.length];
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            newArray1[i] = objectArray[i];
+            count++;
+        }
+        for (int j = 0; j < objectArrayToAdd.length; j++){
+            newArray1[count++] = objectArrayToAdd[j];
+        }
+        Integer[] newArray2 = new Integer[newArray1.length];
+        for (int i = 0; i < newArray1.length; i++){
+            newArray2[i] = (Integer)newArray1[i];
+        }
 
 
-        return null;
+
+        return newArray2;
     }
 }
